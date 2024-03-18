@@ -9,7 +9,7 @@ public class Admin extends User{
 		super(username, password);
 	}
 	
-	//ASKS FOR A USERNAME AND PASSWORD for a new auctioneer account. Call the addAccount method from the jar file
+	//Asks for a username and password for a new auctioneer account. Calls the addAccount() method from the jar file
 	public void createAuctioneer(Scanner in, Accounts obj) {
 		System.out.println("Enter a new username: ");
 		setUsername(in.nextLine());
