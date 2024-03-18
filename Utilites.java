@@ -21,7 +21,7 @@ public class Utilites {
 	private ArrayList<Auctioneer> auctioneerList = new ArrayList<>();
 	public ArrayList<Auctions> auctions = all.getAllAuctions();
 
-	//Driver code called in main.
+	//Driver code called in main
 	public void viewMainMenu() throws IOException {
 		Scanner in = new Scanner(System.in);
 		String choice = "";
