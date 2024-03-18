@@ -1,5 +1,0 @@
-2024-03-18T10:07:30.771119700,Parka sweater,Clothing,20.0,0.0,N/A,Upcoming,nautilus
-2024-03-18T10:19:19.251346600,In-ear monitors,Electronics,150.0,10.0,ABC,In Progress,nautilus
-2024-03-18T10:22:32.098537600,Smartphone,Electronics,300.0,50.0,ABC,In Progress,nautilus
-2024-03-18T10:42:33.140183300,Keyboard,Electronics,50.0,10.0,ABC,Completed,nautilus
-2024-03-18T12:23:26.145689500,Personal computer,Electronics,1000.0,0.0,N/A,Upcoming,Michael
