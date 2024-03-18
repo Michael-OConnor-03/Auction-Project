@@ -10,6 +10,7 @@ import auctions.Auctions;
 import users.*;
 import com.odu.Accounts;
 
+//Imports classes from Accounts.jar file in order to manage accounts.
 public class Utilites {
 	private Accounts customers = new Accounts("C");
 	private Accounts auctioneers = new Accounts("A");
@@ -19,7 +20,8 @@ public class Utilites {
 	private ArrayList<Customer> customerList = new ArrayList<>();
 	private ArrayList<Auctioneer> auctioneerList = new ArrayList<>();
 	public ArrayList<Auctions> auctions = all.getAllAuctions();
-	
+
+	//Driver code called in main.
 	public void viewMainMenu() throws IOException {
 		Scanner in = new Scanner(System.in);
 		String choice = "";
@@ -102,7 +104,8 @@ public class Utilites {
 			}
 		}
 	}
-	
+
+	//Menu method for admin users, who can create auctioneer users
 	private void viewAdminMenu(String username, Scanner in) {
 		System.out.println("Hello, " + username);
 		String choice = null;
@@ -167,7 +170,7 @@ public class Utilites {
 		}
 	}
 	
-	
+	//Method that checks for account type before asking to log in
 	private void login(Scanner in) throws IOException {
 		boolean active = true;
 		String userType;
@@ -185,6 +188,7 @@ public class Utilites {
 		
 	}
 	
+	//Method that logs the user in depending on their account type
 	private void signIn(Scanner in, String userType) throws IOException {
 		System.out.println("Enter username: ");
 		String username = in.nextLine();
@@ -219,7 +223,8 @@ public class Utilites {
 		String pwd = in.nextLine();
 		customers.addAccount(user, pwd);
 	}
-	
+
+	//Auctions are written to a .txt file before
 	private void writeToAuctions() throws IOException {
 		BufferedWriter writer = new BufferedWriter(new FileWriter("Auctions.txt"));
 		
