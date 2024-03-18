@@ -50,7 +50,7 @@ public class Utilites {
 		in.close();
 	}
 	
-	
+	//Menu method for customer users
 	private void viewCustomerMenu(String username, String password, Scanner in) throws IOException {
 		Customer customer = new Customer(username, password, all);
 		
@@ -128,7 +128,8 @@ public class Utilites {
 			}
 		}
 	}
-	
+
+	//Menu method for auctioneer users, who can create, start, and end auctions that belong to them
 	private void viewAuctioneerMenu(String username, String password, Scanner in) throws IOException {
 		Auctioneer auctioneer = new Auctioneer(username, password, all);
 		auctioneer.setAuctions(all);
@@ -189,6 +190,7 @@ public class Utilites {
 	}
 	
 	//Method that logs the user in depending on their account type
+	//signIn() method from Accounts class is called to check if the username and password are correct
 	private void signIn(Scanner in, String userType) throws IOException {
 		System.out.println("Enter username: ");
 		String username = in.nextLine();
@@ -215,7 +217,10 @@ public class Utilites {
 				System.out.println("There was trouble signing in.");
 		}
 	}
-	
+
+	//Method that creates a customer user
+	//Upon receiving a username and password, addAccount() method is called from the Accounts class to check if the user already exists
+	//All users and their passwords are stored in .txt files for their respective types so they can always be accessed
 	private void customerAccountCreation(Scanner in) {
 		System.out.println("Enter new username: ");
 		String user = in.nextLine();
@@ -224,7 +229,7 @@ public class Utilites {
 		customers.addAccount(user, pwd);
 	}
 
-	//Auctions are written to a .txt file before
+	//Auctions are written to a .txt file before the program is exited
 	private void writeToAuctions() throws IOException {
 		BufferedWriter writer = new BufferedWriter(new FileWriter("Auctions.txt"));
 		
